@@ -9,4 +9,5 @@ class Cep:
         self.state = state
 
     def __repr__(self) -> str:
-        return f"{self.street} \n {self.district} \n {self.city} \n {self.state}"
+        return f"""Logradouro: {self.street}\nBairro: {self.district}\nCidade: {self.city}\nEstado: {self.state}
+        """

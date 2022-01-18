@@ -11,7 +11,7 @@ install_requires = \
 ['click>=8.0.3,<9.0.0', 'requests>=2.27.1,<3.0.0']
 
 entry_points = \
-{'console_scripts': ['pycep = main:cep_cli']}
+{'console_scripts': ['pycep = pycep:cep_cli']}
 
 setup_kwargs = {
     'name': 'pycep',

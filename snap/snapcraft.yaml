@@ -7,12 +7,11 @@ description: |
   number, steet name, city, etc.
 
 grade: stable
-confinement: stricts
+confinement: strict
 
 parts:
   pycep:
     plugin: python
-    python-version: python3
     source: .
     python-packages:
       - click
