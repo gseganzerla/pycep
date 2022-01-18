@@ -22,3 +22,10 @@ class TestCep(TestCase):
 
         self.assertIsInstance(cep, Cep)
         self.assertEquals(cep.cep, self.dummy_cep)
+
+    @vcr_.use_cassette
+    def test_request_by_name(self):
+
+        ceps = self.service.request_by_name('RS', 'Porto Alegre', 'Domingos')
+
+        self.assertIsInstance(ceps, list)

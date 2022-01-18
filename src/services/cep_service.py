@@ -11,5 +11,18 @@ class CepService:
 
         data = namedtuple('data', response.keys())(*response.values())
 
-        return Cep(data.cep, data.logradouro, data.bairro,
-                       data.localidade, data.uf)
+        return Cep(data.cep, data.logradouro, data.bairro, data.localidade,
+                   data.uf)
+
+    def request_by_name(self, uf: str, city: str, street: str) -> Cep:
+        response = requests.get(f"{self.URL}/{uf}/{city}/{street}/json").json()
+
+        addresses = []
+        for data in response:
+            address = namedtuple('address', data.keys())(*data.values())
+
+            addresses.append(
+                Cep(address.cep, address.logradouro, address.bairro,
+                    address.localidade, address.uf))
+
+        return addresses
