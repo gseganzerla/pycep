@@ -1,0 +1,26 @@
+name: pycep # you probably want to 'snapcraft register <name>'
+base: core20 # the base snap is the execution environment for this snap
+version: '2.0.0' # just for humans, typically '1.2+git' or '1.3.2'
+summary: A simple application that get information from an address
+description: |
+  This simple cli is used to get some information from an address like cep
+  number, steet name, city, etc.
+
+grade: stable
+confinement: stricts
+
+parts:
+  pycep:
+    plugin: python
+    python-version: python3
+    source: .
+    python-packages:
+      - click
+      - requests
+
+apps:
+  pycep:
+    command: bin/pycep
+    plugs:
+      - home
+      - network

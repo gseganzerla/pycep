@@ -1,8 +1,8 @@
 from unittest import TestCase
 
 from vcr import VCR
-from src.services.cep_service import CepService
-from src.models.cep import Cep
+from pycep.services.cep_service import CepService
+from pycep.models.cep import Cep
 
 vcr_ = VCR(cassette_library_dir='tests/cassetts',
            path_transformer=VCR.ensure_suffix('.yaml'),

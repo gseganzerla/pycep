@@ -1,6 +1,6 @@
 import click
 
-from src.services.cep_service import CepService
+from pycep.services.cep_service import CepService
 
 
 @click.group('cep_cli')
