@@ -5,8 +5,10 @@ name = "pypi"
 
 [packages]
 yapf = "*"
+requests = "*"
 
 [dev-packages]
+vcrpy = "*"
 
 [requires]
 python_version = "3.8"

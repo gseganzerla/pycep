@@ -1,0 +1,52 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.27.1
+    method: GET
+    uri: https://viacep.com.br/ws/01001-000/json
+  response:
+    body:
+      string: "{\n  \"cep\": \"01001-000\",\n  \"logradouro\": \"Pra\xE7a da S\xE9\",\n
+        \ \"complemento\": \"lado \xEDmpar\",\n  \"bairro\": \"S\xE9\",\n  \"localidade\":
+        \"S\xE3o Paulo\",\n  \"uf\": \"SP\",\n  \"ibge\": \"3550308\",\n  \"gia\":
+        \"1004\",\n  \"ddd\": \"11\",\n  \"siafi\": \"7107\"\n}"
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Content-Type, X-Request-With, X-Requested-By
+      Access-Control-Allow-Methods:
+      - GET, OPTIONS
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Max-Age:
+      - '86400'
+      Cache-Control:
+      - max-age=3600
+      - public
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 18 Jan 2022 15:25:53 GMT
+      Expires:
+      - Tue, 18 Jan 2022 16:25:53 GMT
+      Pragma:
+      - public
+      Server:
+      - nginx/1.20.1
+      Transfer-Encoding:
+      - chunked
+    status:
+      code: 200
+      message: OK
+version: 1
