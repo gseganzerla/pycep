@@ -3,7 +3,7 @@ from unittest import TestCase
 from click.testing import CliRunner
 from vcr import VCR
 
-from src import cli
+from pycep import cli
 
 vcr_ = VCR(
     cassette_library_dir='tests/cassetts',

@@ -1,6 +1,6 @@
 import requests
 from collections import namedtuple
-from src.models.cep import Cep
+from pycep.models.cep import Cep
 
 
 class CepService:
