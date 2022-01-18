@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 yapf = "*"
 requests = "*"
+click = "*"
 
 [dev-packages]
 vcrpy = "*"
