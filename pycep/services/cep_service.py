@@ -1,8 +1,9 @@
-import requests
 from collections import namedtuple
-from pycep.models.cep import Cep
-from pycep.decorators.try_request import try_request
 
+import requests
+
+from pycep.decorators.try_request import try_request
+from pycep.models.cep import Cep
 
 
 class CepService:
@@ -29,3 +30,6 @@ class CepService:
                     address.localidade, address.uf))
 
         return addresses
+
+    def hello_world(self):
+        pass
