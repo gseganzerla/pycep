@@ -1,11 +1,15 @@
-import requests
 from collections import namedtuple
+
+import requests
+
+from pycep.decorators.try_request import try_request
 from pycep.models.cep import Cep
 
 
 class CepService:
     URL = 'https://viacep.com.br/ws'
 
+    @try_request
     def request_by_cep(self, cep: str) -> Cep:
         response = requests.get(f"{self.URL}/{cep}/json").json()
 
@@ -13,7 +17,7 @@ class CepService:
 
         return Cep(data.cep, data.logradouro, data.bairro, data.localidade,
                    data.uf)
-
+    @try_request
     def request_by_name(self, uf: str, city: str, street: str) -> Cep:
         response = requests.get(f"{self.URL}/{uf}/{city}/{street}/json").json()
 
@@ -26,3 +30,6 @@ class CepService:
                     address.localidade, address.uf))
 
         return addresses
+
+    def hello_world(self):
+        pass
